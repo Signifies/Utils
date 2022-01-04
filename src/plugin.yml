@@ -1,0 +1,87 @@
+name: Utils
+main: signifies.github.io.Utils
+version: 1.4.4
+api-version: 1.13
+description: Basic utility plugin for Signifies and Anni Personal servers.
+website: https://signifies.github.io/
+author: Signifies
+softdepend: [vault, permissionsEx]
+
+commands:
+  util:
+    description: Main command for this plugin.
+    aliases: [utils, utilities, ut]
+  spawn:
+    description: Teleports the player to the spawn.
+    aliases: [thelobbyyo]
+  whitelist:
+    description: Advanced whitelist manager stuff.
+    aliases: [wl,wlm]
+  chat:
+    description: Manages all chat.
+    aliases: [c, ch]
+  staffchat:
+    description: Staff chat.
+    aliases: [sc]
+  prefix:
+    description: Prefix command.
+    aliases: [pre, tag]
+  broadcast:
+    description: Broadcasts custom messages.
+    aliases: [bc,b,alert]
+  color:
+    description: Change your color name.
+    aliases: [ncolor, clr]
+  pvp:
+    description: Toggles your PVP status.
+    aliases: [pvptoggle, ptoggle, pt]
+  cms:
+    description: CTF Match Spotlight Mode.
+    aliases: [spotlight, ctfspot]
+  setwarp:
+    description: Utils setwarp command.
+    aliases: [swarp, setw]
+  warp:
+    description: Utils Warp command.
+    aliases: [uwarp]
+  flagblue:
+    description: CMS teleport command blue.
+    aliases: [fb]
+  flagred:
+    description: CMS teleport command red.
+    aliases: [fr]
+permissions:
+  utils.chat.format:
+    description: Gives all access to chat formatting.
+    children:
+      utils.chat.world: true
+      utils.chat.color: true
+      utils.chat.location: true
+      utils.chat.exp: true
+  utils.member:
+    description: Given to trusted memebers on the server.
+    children:
+      utils.chat: true
+      utils.suffix: true
+      utils.chat.clearself: true
+      utils.pvp.toggle: true
+      utils.ci: true
+      utils.access: true
+      utils.guest: true
+      utils.chat.format: true
+      utils.prefix.self: true
+  utils.mod:
+    description: Mod commands.
+    children:
+      utils.chat.clear: true
+      utils.chat.clearothers: true
+      utils.alert: true
+      utils.chat.enable: true
+      utils.chat.disable: true
+      utils.staffchat: true
+      utils.chat.whitelist: true
+      utils.member: true
+      utils.prefix.others: true
+      utils.broadcast: true
+      utils.notify: true
+      utils.whitelist.notify: true

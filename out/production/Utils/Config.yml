@@ -1,0 +1,107 @@
+# Do we use default permission message or custom ?
+perm-message:
+  default: false
+  format: "&a&l>> &7Sorry, no permissions for this feature."
+#
+# Messages
+Messages:
+  join: "&8[&a&l+&8] {suffix}{player}"
+  quit: "&8[&4&l-&8] {suffix}{player}"
+  motd:
+    - "&7     ----- &a&lSurvival Server &7-----"
+    - "&bWelcome, &f{player}&b!"
+    - "&7> &fThere are &a{online_players} &fout of &3{max_players} &fonline&3!"
+    - "&7The time and date is: &a{time}"
+    - "&7> Use /help"
+#
+# Server Message of The Day. For list ping and in-game
+MOTD:
+  server-list: "&4&k|| &6&lEAK &6- &21.18 Survival &4&k||"
+#
+mod-broadcast:
+  format: "&4#Staff&6&l> &7{admin}: &7&o{msg}"
+#
+Maintenance:
+  enabled: false
+  msg: "&4[!]Server maintenance in progress.[!]"
+#
+# Don't fucking touch the use permission value.
+# Unless you know exactly what you are doing.
+Whitelist:
+  use-permission: false
+  permission: "utils.specific.permission"
+  kick-message: "&9Whitelist&8> &cYou are not whitelisted, &c&n{name}.\n&cContact Signifies on Discord."
+  whitelist-alert: "&6Alert&7&l> &6&l{name}, &7is not Whitelisted!"
+  enforce-kick: "&4Server whitelist was enforced by an Admin!"
+  enforce: "&4{admin}> &7whitelist enforce success!"
+#
+Chat:
+  Enabled: true
+  use-perm: false
+  chat-filter: true
+  msg: "&7Chat has been set to &avalue&7."
+  chat-disabled: "&7The chat has been &asilenced."
+  no-permission: "&cYou don't have permission to speak here. &4/msg only."
+  custom-chat:
+    Enabled: true
+    delay-prefix: 10
+    delay-suffix: 10
+    Format: "{world}{suffix}{name}&7&l> &f{msg}"
+  Broadcast:
+    format: "&4#&l&5Alert&7>&r {msg}"
+    preconfigured-msgs:
+    - Msg one.
+    - msg 2.
+    - msg 3.
+#
+# {0}: victim {1}: Attacker
+PVP:
+  toggle-pvp: true
+  message: "&6You or &c&l{0} &6does not have PVP enabled. Use &c&l/pvp &6to toggle on/off."
+  delay: 6
+#
+Economy:
+  enabled: false
+  chat:
+    prefix-suffix:
+      enabled: false
+      price: 100.00
+
+restriction-msg: "&7Sorry, this command has been disabled."
+#
+blocked-cmds:
+  - /deop
+  - /op
+  - /rl
+  - /reload
+  - /stop
+  - /we
+  - //we
+  - /wg
+  - /worldguard
+  - /region
+  - /ban-ip
+  - /banip
+  - /pl
+  - /plugins
+  - /playerlock
+  - /lock
+  - /banlist
+  - /tpall
+  - /save-on
+  - /save-all
+  - /motdlist
+  - /serverlist
+  - /pardon-ip
+  - /unbanip
+  - /pardonip
+  - /sus
+#
+blocked-words:
+- words
+- that
+- are
+- bad.
+# Troll chat setting
+gulfer: false
+orange: false
